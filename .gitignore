@@ -1,0 +1,8 @@
+# Arquivos temporarios
+*.tmp
+
+# Arquivos de compilação
+*.exe
+
+# Diretório de dependencias
+node_modules/
