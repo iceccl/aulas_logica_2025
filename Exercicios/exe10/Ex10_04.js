@@ -1,12 +1,14 @@
 const prompt = require('prompt-sync')();
-let saldo = 1500;
+let saldo = 0;
+
+
 function deposito(valor) {
-    saldo -= valor
+    saldo += valor
     console.log(`Depósito de ${valor} realizado com sucesso.`);
 }
 
 function sacar(valor) {
-    saldo += valor
+    saldo -= valor
     console.log(`Saque de ${valor}R$ realizado com sucesso.`);
 }
 
@@ -15,11 +17,11 @@ function consulta() {
 }
 
 
-while (saldo <= 1500) {
+while (saldo <= 1500000) {
     console.log('////////////////////////////////////////////////////////////////////////');
-    console.log("Bem vindo ao banco!");
+    console.log("Bem vindo ao caixa eletrônico!");
     console.log("O que deseja fazer?");
-    let escolha = prompt("[1]Depositar, [2]Sacar, [3]Consultar saldo, [4]Parar programa: ")
+    let escolha = prompt("[1]Depositar, [2]Sacar, [3]Mostrar saldo, [4]Sair: ")
     if (escolha == '1') {
         deposito(prompt('Digite o valor a ser depositado: '))
     }else if(escolha == '2'){
